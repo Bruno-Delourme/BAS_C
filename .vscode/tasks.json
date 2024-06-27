@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g", // Option de débogage
+                "${file}", // Fichier source à compiler
+                "-o", // Spécifie le nom de l'exécutable de sortie
+                "${fileDirname}/${fileBasenameNoExtension}" // Nom de l'exécutable
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task by user"
+        }
+    ]
+}
